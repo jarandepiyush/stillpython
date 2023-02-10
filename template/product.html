@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% block title %} Product {% endblock title %}
+{% block body %}
+
+<style>
+    .imge {
+        /*for imeges  */
+        padding: 0px;
+        width: 600px;
+        height: 550px;
+        float: left;
+        margin: 30px 10px;
+        border-radius: 20px;
+        border: 10px solid black;
+
+    }
+
+    #ourpro {
+        font-size: 70px;
+        text-align: center;
+        padding: 250px;
+        color: white;
+        text-shadow: 5px 5px #2c2828;
+    }
+
+    .main {
+        width: 100%;
+        height: 600px;
+        margin-top: 30px;
+        background-size: 1650px 850px;
+        background-image: url(static/main.jpg);
+        background-repeat: no-repeat;
+    }
+
+    .nfloat {
+        float: left;
+        color: black;
+        text-align: center;
+        margin: 10px 180px;
+    }
+
+    .clear {
+        clear: both;
+    }
+
+    img:hover {
+        opacity: 0.5;
+    }
+</style>
+
+<div class="main">
+    <p id="ourpro"><b>Our Products</b></p>
+</div>
+
+<div class="container">
+    <div>
+        <a href=pro1.html> <img src="static/pro1.jpg" class="imge"> </a>
+        <a href=pro2.html> <img src="static/pro2.jpg" class="imge"> </a>
+
+    </div>
+
+    <div>
+        <a href=pro1.html class="clear">
+            <h1 class="nfloat">MS Round Bars</h1>
+        </a>
+        <a href=pro2.html>
+            <h1 class="nfloat">MS Channels</h1>
+        </a>
+    </div>
+
+    <div>
+        <a href=pro3.html> <img src="static/pro3.jpg" class="imge"> </a>
+        <a href=pro4.html> <img src="static/pro4.jpg" class="imge"> </a> <br>
+    </div>
+
+    <div>
+        <a href=pro3.html class="clear">
+            <h1 class="nfloat">MS Angles</h1>
+        </a>
+        <a href=pro4.html>
+            <h1 class="nfloat">MS Square Bars</h1>
+        </a>
+    </div>
+
+    <div>
+        <a href=pro5.html> <img src="static/pro5.jpg" class="imge"> </a>
+        <a href=pro6.html> <img src="static/pro6.jpg" class="imge"> </a> <br>
+    </div>
+
+    <div>
+        <a href=pro5.html class="clear">
+            <h1 class="nfloat">MS Flat Bars</h1>
+        </a>
+        <a href=pro6.html>
+            <h1 class="nfloat">MS I Beam</h1>
+        </a>
+    </div>
+
+</div>
+
+
+{% endblock body %}

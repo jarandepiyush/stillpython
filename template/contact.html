@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% block title %} Contact {% endblock title %}
+{% block body %}
+
+<style>
+    .text {
+        margin: 20px auto;
+        padding: 0px 20px;
+        font-size: 20px;
+
+        width: 450px;
+        overflow: hidden;
+
+    }
+
+    /*       .floatb {
+            float: left;
+            margin: 10px auto;
+            padding: 0px 20px;
+            font-size: 20px;
+            overflow: hidden;
+        }   */
+
+    .flex-container {
+        background-color: black;
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 5px;
+        color: white;
+
+    }
+
+    .box {
+
+        width: 50%;
+        margin: 10px;
+        padding: 0px 150px;
+    }
+
+    .form {
+        text-align: center;
+        margin: 50px;
+        font-size: 20px;
+    }
+
+    /* form background images */
+    .bgimg {
+        background-image: url(static/form2.png);
+        background-repeat: no-repeat;
+        background-size: 1650px 850px;
+    }
+</style>
+
+<body class="bgimg">
+    <div>
+        <form method="POST" action="contact.html" class="form">
+            {% csrf_token %}
+            <label for="name">Full Name : </label>
+            <input type="text" id="name" required name="name" placeholder="Enter Your Name" autocomplete="off"> <br><br>
+
+            <label for="phone">Mobile No. : </label>
+            <input type="text" id="phone" required name="phone" placeholder="Enter your 10 digit no." autocomplete="off" min="0"
+                max="10">
+            <br><br>
+
+            <label for="email">Email Id : </label>
+            <input type="email" id="email" name="email" required placeholder="example@gmail.com" autocomplete="off"> <br><br>
+
+            <label for="desc"> Comment : </label>
+            <textarea rows="3" cols="30" name="desc" placeholder="Comment here...">
+
+         </textarea> <br>
+
+            <input type="submit" target="_blank">
+
+    </div> <br><br><br><br><br><br><br><br><br><br>
+
+    <div class="flex-container">
+        <div class="box">
+            <h2>Our Head Office </h2>
+            <h3 style="margin-left: 100px;">MUMBAI</h3>
+            <p>417-19, Vyapar Bhavan, 49 P D Mello Road,</p>
+            <p>Carnac Bunder, Mumbai - 400009</p>
+            <p>Phone : 91- 22-66338888</p>
+            <p>Mobile : 91-9223357777</p>
+            <p>E-mail : mumbaisales@indeainsteel.com</p>
+        </div>
+
+        <div class="box">
+            <h2>Our Branch Office </h2>
+            <h3 style="margin-left: 100px;">PUNE</h3>
+            <p>417-19, Vyapar Bhavan, 49 P D Mello Road,</p>
+            <p>Carnac Bunder, Mumbai - 400009</p>
+            <p>Phone : 91- 22-66334444</p>
+            <p>Mobile : 91-9223370000</p>
+            <p>E-mail : punesales@indeainsteel.com</p>
+        </div>
+
+    </div>
+
+</body>
+
+{% endblock body %}
